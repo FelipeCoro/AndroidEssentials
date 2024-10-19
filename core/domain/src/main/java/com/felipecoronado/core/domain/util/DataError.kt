@@ -2,18 +2,18 @@ package com.felipecoronado.core.domain.util
 
 sealed interface DataError:Error {
     enum class Network:DataError{
-        REQUEST_TIOMEOUT,
+        REQUEST_TIMEOUT,
         UNAUTHORIZED,
         CONFLICT,
-        TWO_MAY_REQUEST,
+        TOO_MAY_REQUEST,
         NO_INTERNET,
         PAYLOAD_TOO_LARGE,
         SERVER_ERROR,
+        SERIALIZATION,
         UNKNOWN
     }
 
     enum class Local:DataError{
         DISK_FULL,
-
     }
 }

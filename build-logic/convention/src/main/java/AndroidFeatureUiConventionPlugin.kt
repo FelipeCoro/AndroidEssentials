@@ -8,9 +8,9 @@ class AndroidFeatureUiConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         target.run {
             pluginManager.run {
-                apply("org.jetbrains.kotlin.plugin.compose")
                 apply("androidessentials.android.library.compose")
             }
+
             dependencies {
                 addUiLayerDependencies(target)
             }
